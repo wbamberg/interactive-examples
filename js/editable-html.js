@@ -5,7 +5,7 @@
     var codeBlock = document.getElementById('static-js');
     var update = document.getElementById('update');
     var liveContainer = '';
-    var output = document.querySelector('#output code');
+    var output = document.querySelector('#output');
     var reset = document.getElementById('reset');
 
     var codeMirror;
