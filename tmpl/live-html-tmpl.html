@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>%title%</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../../css/codemirror-5-31-0.css" rel="stylesheet" />
+    <link href="../../css/editor-html.css" rel="stylesheet" />
+    %example-css-src%
+  </head>
+  <body>
+      <section id="static">
+          %example-code%
+      </section>
+
+      <section id="live" class="live hidden">
+          <header><h4>%title%</h4></header>
+          <div id="flex-container">
+              <div id="input-container">
+                  <div id="editor" class="editor"></div>
+                  <div id="button-container">
+                      <button id="reset" type="button" class="button">Reset</button>
+                      <button id="update" class="button" type="button">Update &rsaquo;</button>
+                  </div>
+              </div>
+              <div id="output-container">
+                  <div id="output" class="output"><code></code></div>
+              </div>
+        </div>
+      </section>
+
+    %example-js-src%
+
+    <script src="../../js/codemirror-5-31-0.js"></script>
+    <script src="../../js/editor-html.js"></script>
+  </body>
+</html>

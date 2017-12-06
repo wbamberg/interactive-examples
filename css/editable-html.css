@@ -1,0 +1,98 @@
+.editor,
+.output {
+    font-size: 14px;
+}
+
+.js .editor {
+    min-height: 280px;
+}
+
+.editor {
+    position: relative;
+    margin-bottom: 1em;
+    border: 1px solid #3f87a6;
+    border-left: 5px solid #3f87a6;
+}
+
+.output {
+    position: relative;
+    display: inline-block;
+    background-color: #fff;
+    margin: 0;
+    padding: .8em;
+    border: 1px solid #eaf2f4;
+    box-shadow: 2px 2px 5px -2px rgba(0, 0, 0, .1);
+    height: 100%;
+    font-family: courier;
+}
+
+.output code {
+    width: 100%;
+    white-space: pre;
+    vertical-align: middle;
+    word-break: break-word;
+    overflow-y: auto;
+}
+
+#button-container {
+  float: right;
+}
+
+.button {
+    display: inline-block;
+    background-color: #fff;
+    color: #333;
+    padding: .5em;
+    border: 2px solid #333;
+    width: 100px;
+    font-size: 14px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.button:first-child {
+    margin-bottom: .5em;
+}
+
+.button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+#flex-container {
+  display: flex;
+}
+
+#input-container {
+  flex: 3;
+  max-width: 40%;
+  margin-right: 0.5em;
+}
+
+#output-container {
+  flex: 4;
+  max-width: 60%;
+  margin-left: 0.5em;
+}
+
+/* CodeMirror overrides */
+.CodeMirror {
+    height: 280px;
+}
+
+@supports (display: flex) {
+    .buttons-container {
+        align-self: flex-start;
+        width: auto;
+    }
+
+    .run {
+        margin-right: 10px;
+    }
+
+    .output {
+        display: flex;
+        flex: 10 150px;
+        align-items: center;
+    }
+}

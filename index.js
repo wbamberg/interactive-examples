@@ -11,6 +11,7 @@ const config = {
     codeMirrorModes: 'js/mode',
     destCssDir: './docs/css/',
     destJsDir: './docs/js/',
+    destHtmlDir: './docs/html/',
     examplesDir: './docs/pages/',
     examplesRoot: 'live-examples',
     jsExamplesDir: './docs/pages/js/',
@@ -54,6 +55,19 @@ function buildBundles(bundles) {
 
             // ensure the target dir exists
             ensureDir(config.destJsDir);
+
+            // concatenate, uglify, and write the result to file
+            concat(currentBundle.javascript).then(function(result) {
+                let uglified = uglify.minify(result);
+                fse.outputFileSync(outputFileName, uglified.code);
+            });
+        }
+
+        if (currentBundle.html) {
+            let outputFileName = config.destHtmlDir + currentFilename + '.js';
+
+            // ensure the target dir exists
+            ensureDir(config.destHtmlDir);
 
             // concatenate, uglify, and write the result to file
             concat(currentBundle.javascript).then(function(result) {

@@ -3,7 +3,8 @@
         "codeMirror": {
             "javascript": [
                 "js/lib/codemirror.js",
-                "js/mode/javascript/javascript.js"
+                "js/mode/javascript/javascript.js",
+                "js/mode/xml/xml.js"
             ],
             "css": [
                 "css/libs/codemirror.css",
@@ -29,11 +30,24 @@
             "javascript": ["js/editor-js-bundle.js"],
             "css": ["css/editor-libs/common.css", "css/editable-js.css"],
             "destFileName": "editor-js"
+        },
+        "editorHTML": {
+            "javascript": ["js/editor-html-bundle.js"],
+            "css": ["css/editor-libs/common.css", "css/editable-html.css"],
+            "destFileName": "editor-html"
         }
     },
     "pages": {
+       "table-element": {
+          "baseTmpl": "tmpl/live-html-tmpl.html",
+          "exampleCode": "live-examples/html-examples/table-element.html",
+          "cssExampleSrc": "../../live-examples/html-examples/css/table-element.css",
+          "fileName": "table-element.html",
+          "title": "HTML Demo: &lt;table&gt;",
+          "type": "html"
+        },
         "arrayConcat": {
-            "baseTmpl": "tmpl/live-js-tmpl.html",
+            "baseTmpl": "tmpl/live-html-tmpl.html",
             "exampleCode": "live-examples/js-examples/array-concat.html",
             "fileName": "array-concat.html",
             "title": "JavaScript Demo: Array.concat()",

@@ -29,13 +29,18 @@
         {
             "path": "./docs/js/editor-js.js",
             "maxSize": "4 kB"
+        },
+        {
+            "path": "./docs/js/editor-html.js",
+            "maxSize": "4 kB"
         }
     ],
     "scripts": {
         "build-css-bundle": "browserify js/editable-css.js -o js/editor-css-bundle.js",
         "build-js-bundle": "browserify js/editable-js.js -o js/editor-js-bundle.js",
+        "build-html-bundle": "browserify js/editable-html.js -o js/editor-html-bundle.js",
         "build-pages": "node index.js",
-        "build": "npm-run-all build-css-bundle build-js-bundle build-pages",
+        "build": "npm-run-all build-css-bundle build-js-bundle build-html-bundle build-pages",
         "start-server": "http-server ./docs",
         "start-watch": "chokidar '**/{*.js,*.css,*.html,*.json}' -i 'docs/**' -i 'node_modules/**' -i 'js/editor-*-bundle.js' -c 'npm run build' --initial --silent",
         "start": "npm-run-all --parallel start-watch start-server",
@@ -48,6 +53,7 @@
     "keywords": [
         "javascript",
         "css",
+        "html",
         "nodejs",
         "page-generator",
         "mdn",
