@@ -29,6 +29,7 @@
             autofocus: true,
             inputStyle: 'contenteditable',
             lineNumbers: true,
+            lineWrapping: true,
             mode: 'xml',
             htmlMode: true,
             undoDepth: 5,
